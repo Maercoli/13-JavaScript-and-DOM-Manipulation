@@ -45,8 +45,22 @@ function runEnter() {
 
     console.log(inputValue);
     console.log(reports);
-
+    
     var filteredData = reports.filter(report => report.datetime === inputValue);
 
-    console.log(filteredData)
+    console.log(filteredData);
+
+    // Create an array with just the dates
+    var dates = filteredData.map(day => day.datetime);
+
+    //select the table element by id
+    var newTable = d3.select("#ufo-table")
+
+    // remove any children from the list to
+    tbody.html("");
+
+    // display filtered data
+    console.log(filteredData);
 };
+
+
