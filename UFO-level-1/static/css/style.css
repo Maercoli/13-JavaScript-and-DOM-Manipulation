@@ -239,8 +239,9 @@ select {
   font-size: small;
 }
 
-.label{
-  font-family: Verdana;
-  font-size: 20px;
+.panel-body{
+  background-color:lightgray;
 }
-
+.list-group-item{
+  background-color: lightgray;
+}

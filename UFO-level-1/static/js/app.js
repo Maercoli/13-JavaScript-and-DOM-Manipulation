@@ -59,8 +59,18 @@ function runEnter() {
     // remove any children from the list to
     tbody.html("");
 
+    var updatedTbody = d3.select("tbody");
+
     // display filtered data
-    console.log(filteredData);
+    filteredData.forEach((Report) => {
+        var row = tbody.append("tr");
+        Object.entries(Report).forEach(([key,value]) => { 
+        var cell = row.append("td");
+        cell.text(value)
+        });
+    });
+    
+    
 };
 
 
