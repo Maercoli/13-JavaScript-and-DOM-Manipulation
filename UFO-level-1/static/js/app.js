@@ -51,7 +51,7 @@ function runEnter() {
     console.log(filteredData);
 
     // Create an array with just the dates
-    var dates = filteredData.map(day => day.datetime);
+    //var dates = filteredData.map(day => day.datetime);
 
     //select the table element by id
     var newTable = d3.select("#ufo-table")
