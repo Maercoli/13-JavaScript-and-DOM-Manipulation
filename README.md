@@ -10,7 +10,7 @@ The goal of this project is to create a table dynamically based upon a dataset p
 
 * I created a basic HTML web page.
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, I wrote a code that appends a table to your web page and then adds new rows of data for each UFO sighting.
+* Using the UFO dataset provided in the form of an array of JavaScript objects, I wrote a code that appends a table to the web page and then adds new rows of data for each UFO sighting.
 
   * Note that the table has a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
 
