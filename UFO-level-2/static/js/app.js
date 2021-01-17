@@ -18,9 +18,6 @@ data.forEach((ufoReport) => {
     });
 });
 
-// Assign the data from `data.js` to a descriptive variable
-//var reports = data;
-
 // Select the button
 var button = d3.selectAll("#filter-btn");
 
