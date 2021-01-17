@@ -43,23 +43,11 @@ function runEnter() {
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
 
-    //console.log(inputValue);
-    //console.log(reports);
-    if (inputValue != "") {
-        var filteredData = reports.filter(report => report.datetime === inputValue);
-    };
-    //console.log(filteredData);
-
-    // Create an array with just the dates
-    //var dates = filteredData.map(day => day.datetime);
-
-    //select the table element by id
-    //var newTable = d3.select("#ufo-table")
+    // Assign a variable to filter the data according to the value property of the input element
+    var filteredData = reports.filter(report => report.datetime === inputValue);
 
     // remove any children from the list to
     tbody.html("");
-
-    //var updatedTbody = d3.select("tbody");
 
     // display filtered data
     filteredData.forEach((Report) => {

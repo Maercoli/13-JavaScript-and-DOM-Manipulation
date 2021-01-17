@@ -19,7 +19,7 @@ data.forEach((ufoReport) => {
 });
 
 // Assign the data from `data.js` to a descriptive variable
-var reports = data;
+//var reports = data;
 
 // Select the button
 var button = d3.selectAll("#filter-btn");
@@ -37,48 +37,67 @@ function runEnter() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
     
-    // Select the input element and get the raw HTML node
-    var inputElementDate = d3.select("#datetime");
-    var inputElementCity = d3.select("#city");
-    var inputElementState = d3.select("#state");
-    var inputElementCountry = d3.select("#country");
-    var inputElementShape = d3.select("#shape");
+    // Select the input element and get the value property added in the element
+    var date = d3.select("#datetime").property("value");
+    var city = d3.select("#city").property("value");
+    var state = d3.select("#state").property("value");
+    var country = d3.select("#country").property("value");
+    var shape = d3.select("#shape").property("value");
 
-    // Get the value property of the input element
-    var inputValueDate = inputElementDate.property("value");
-    var inputValueCity = inputElementCity.property("value");
-    var inputValueState = inputElementState.property("value");
-    var inputValueCountry = inputElementCountry.property("value");
-    var inputValueShape = inputElementShape.property("value");
+    // Assign a variable to filter the data according to the value property of the input element
+    var filteredData = data;    
 
-    console.log(inputElementCity)
-    // Filter data according to input value
-    if (inputElementDate !="") {
-        var filteredData = reports.filter(report => report.datetime === inputValueDate);
-    };
-    if (inputElementCity !="") {
-        var filteredData = reports.filter(report => report.city === inputValueCity);
-    };
-    if (inputElementState !="") {
-        var filteredData = reports.filter(report => report.state === inputValueState);
-    };
-    if (inputElementCountry !="") {
-        var filteredData = reports.filter(report => report.country === inputValueCountry);
-    };
-    if (inputElementDate !="") {
-    var filteredData = reports.filter(report => report.shape === inputValueShape);
-    };
-
-    // remove any children from the list to
-    tbody.html("");
-  
-    // display filtered data
-    filteredData.forEach((Report) => {
-        var row = tbody.append("tr");
-        Object.entries(Report).forEach(([key,value]) => { 
-        var cell = row.append("td");
-        cell.text(value)
+    // Filter data according to each input value
+    if (date) {
+        filteredData = filteredData.filter((ufoReport) => {
+            return ufoReport.datetime == date;
         });
-   
-    });   
+    };
+    
+    if (city) {
+        filteredData = filteredData.filter((ufoReport) => {
+            return ufoReport.city == city;
+        }); 
+    };   
+    
+    if (state) {
+        filteredData = filteredData.filter((ufoReport) => {
+            return ufoReport.state == state;
+        }); 
+    };
+
+    if (country) {
+        filteredData = filteredData.filter((ufoReport) => {
+            return ufoReport.country == country;
+        }); 
+    };
+
+    if (shape) {
+        filteredData = filteredData.filter((ufoReport) => {
+            return ufoReport.shape == shape;
+        }); 
+    };
+     // remove any children from the list to
+     tbody.html("");
+
+     if (filteredData.length > 0) {
+        buildTable(filteredData);
+     }
+     else {
+         var row = tbody.append("h2").text("No data found")
+     };
 };
+
+
+// Function to build filtered data
+function buildTable (data) {
+    data.forEach((ufoReport) => {
+         var row = tbody.append("tr");
+         Object.entries(ufoReport).forEach(([key,value]) => { 
+         var cell = row.append("td");
+         cell.text(value)
+         });
+    
+     }); 
+    
+;}
