@@ -2,9 +2,9 @@
 
 ## Project goal and actions:
 
-The goal of this project is to create a table dynamically based upon a dataset provided by ALIENS-R-REAL. This company has a large collection of information and needs to have this online so their dedicated followers will locate specific reports easily.
+The goal of this project is to create a dinamic table based upon a dataset provided by ALIENS-R-REAL. This company has a large collection of information and needs to have this online so their dedicated followers will locate specific reports easily.
 
-## My Task
+## The Task
 
 ### Level 1: Automatic Table and Date Search (Required)
 
@@ -15,6 +15,9 @@ The goal of this project is to create a table dynamically based upon a dataset p
   * Note that the table has a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
 
 * I used a date form in your HTML document and wrote JavaScript code that listens for events and searchs through the `date/time` column to find rows that match user input.
+
+This is how the final HTML page looks like:
+![ufo_01](Images/ufo_01.gif)
 
 ### Level 2: Multiple Search Categories (Optional)
 
