@@ -30,3 +30,6 @@ This is how the final HTML page looks like:
   3. `state`
   4. `country`
   5. `shape`
+
+  This is how the final HTML page looks like:
+![ufo_02](Images/ufo_02.gif)
