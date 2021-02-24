@@ -33,3 +33,9 @@ This is how the final HTML page looks like:
 
   This is how the final HTML page looks like:
 ![ufo_02](Images/ufo_02.gif)
+
+
+Feel free to reach out to me, if you have any questions.
+
+### Marina Ercoli
+E-mail: maercoli@hotmail.com
