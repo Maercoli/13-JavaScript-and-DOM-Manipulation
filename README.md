@@ -2,7 +2,7 @@
 
 ## Project goal and actions:
 
-The goal of this project is to create a dinamic table based upon a dataset provided by ALIENS-R-REAL. This company has a large collection of information and needs to have this online so their dedicated followers will locate specific reports easily.
+The goal of this project is to create a dynamic table based upon a dataset provided by ALIENS-R-REAL. This company has a large collection of information and needs to have this online so their dedicated followers will locate specific reports easily.
 
 ## The Task
 
