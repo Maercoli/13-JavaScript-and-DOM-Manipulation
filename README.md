@@ -38,4 +38,4 @@ This is how the final HTML page looks like:
 Feel free to reach out to me, if you have any questions.
 
 ### Marina Ercoli
-E-mail: maercoli@hotmail.com
+E-mail: maercoli2017@gmail.com
